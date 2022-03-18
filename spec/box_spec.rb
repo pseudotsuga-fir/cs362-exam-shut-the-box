@@ -48,10 +48,11 @@ describe 'A box' do
 
   describe '#shut?' do
     it 'is true when there are no tiles remaining' do
-      skip
+      box.tiles.each { |tile| tile.flip }
+      expect(box.shut?).to be_truthy
     end
     it 'is false when there are tiles remaining' do
-      skip
+      expect(box.shut?).to be_falsey
     end
   end
 
