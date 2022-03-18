@@ -14,7 +14,8 @@ describe 'A tile set' do
     end
 
     it 'returns an array of tiles whose values increase from 1, by 1' do
-      skip
+      tiles = TileSet.generate.map { |tile| tile.value }
+      expect(tiles).to eq([1,2,3,4,5,6,7,8,9])
     end
 
   end
