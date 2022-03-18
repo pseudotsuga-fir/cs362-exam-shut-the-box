@@ -38,10 +38,11 @@ describe 'A box' do
 
   describe '#no_tiles_remaining?' do
     it 'returns true when none of the tiles are up' do
-      skip
+      box.tiles.each { |tile| tile.flip }
+      expect(box.no_tiles_remaining?).to be_truthy
     end
     it 'returns false when any tile is up' do
-      skip
+      expect(box.no_tiles_remaining?).to be_falsey
     end
   end
 
