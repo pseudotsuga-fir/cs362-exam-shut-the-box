@@ -2,13 +2,15 @@ require_relative '../lib/die'
 
 describe 'A die' do
 
+  let(:die) { Die.new }
+
   describe 'attributes' do
-    it 'TODO' do
-      skip
+    it 'has a number of sides' do
+      expect(die).to respond_to(:number_of_sides)
     end
 
-    it 'TODO' do
-      skip
+    it 'has a face value' do
+      expect(die).to respond_to(:face_value)
     end
   end
 
