@@ -13,7 +13,7 @@ describe 'A tile' do
 
   describe '#up?' do
     it 'is up by default' do
-      skip
+      expect(tile.up?).to be_truthy
     end
   end
 
