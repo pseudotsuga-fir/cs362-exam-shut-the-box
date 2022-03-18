@@ -28,7 +28,7 @@ describe 'A die' do
 
   describe 'face value' do
     it 'has a face value of 1 by default' do
-      skip
+      expect(die.face_value).to eq(1)
     end
   end
 
