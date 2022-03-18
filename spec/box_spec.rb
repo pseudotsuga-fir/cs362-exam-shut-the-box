@@ -13,12 +13,15 @@ describe 'A box' do
   describe 'creation' do
     context 'by default' do
       it 'will initialize an array of tiles' do
-        skip
+        expect(box.tiles).to include(a_kind_of(Tile))
       end
     end
     context 'with a specific array of tiles' do
       it 'will retain the tiles passed its constructor' do
-        skip
+        num_tiles = 22
+        box = Box.new(TileSet.generate(num_tiles))
+
+        expect(box.tiles.length).to eq(num_tiles)
       end
     end
   end
