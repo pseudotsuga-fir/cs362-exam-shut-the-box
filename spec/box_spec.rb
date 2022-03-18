@@ -58,7 +58,7 @@ describe 'A box' do
 
   describe '#total_value_of_remaining_tiles' do
     it 'is the sum of the values of all the tiles that are still up' do
-      skip
+      expect(box.total_value_of_remaining_tiles).to eq(1+2+3+4+5+6+7+8+9)
     end
   end
 
